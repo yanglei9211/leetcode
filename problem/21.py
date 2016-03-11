@@ -28,6 +28,9 @@ def countLink(head):
 
 class Solution(object):
     def mergeTwoLists(self, l1, l2):
+		a = 3
+		b = 5
+		print a * b
 		h1 = l1
 		h2 = l2
 		resH = ListNode(-1)
@@ -46,12 +49,7 @@ class Solution(object):
 		if h2 : tmp.next = h2
 		resH = resH.next
 		return resH
-test = Solution()
-a = [2]
-b = [1]
-la = creadLink(a)
-lb = creadLink(b)
-printLink(test.mergeTwoLists(la,lb))
+
 
 
 
