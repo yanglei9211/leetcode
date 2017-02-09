@@ -60,9 +60,11 @@
       <file leaf-file-name="37.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/37.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="425">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+              <folding>
+                <element signature="e#14#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,14 +181,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
   </component>
-  <component name="RunManager" selected="Go Application.Build 36.go and run">
-    <configuration default="false" name="Build 31.go and run" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="problemGo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/31.go" />
-      <kind value="FILE" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Go Application.Build 37.go and run">
     <configuration default="false" name="Build 33.go and run" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="problemGo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -212,6 +207,13 @@
       <module name="problemGo" />
       <working_directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/36.go" />
+      <kind value="FILE" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Build 37.go and run" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="problemGo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/37.go" />
       <kind value="FILE" />
       <method />
     </configuration>
@@ -444,19 +446,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Go Application.Build 31.go and run" />
-      <item index="1" class="java.lang.String" itemvalue="Go Application.Build 33.go and run" />
-      <item index="2" class="java.lang.String" itemvalue="Go Application.Build 34.go and run" />
-      <item index="3" class="java.lang.String" itemvalue="Go Application.Build 35.go and run" />
-      <item index="4" class="java.lang.String" itemvalue="Go Application.Build 36.go and run" />
+      <item index="0" class="java.lang.String" itemvalue="Go Application.Build 33.go and run" />
+      <item index="1" class="java.lang.String" itemvalue="Go Application.Build 34.go and run" />
+      <item index="2" class="java.lang.String" itemvalue="Go Application.Build 35.go and run" />
+      <item index="3" class="java.lang.String" itemvalue="Go Application.Build 36.go and run" />
+      <item index="4" class="java.lang.String" itemvalue="Go Application.Build 37.go and run" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Application.Build 36.go and run" />
-        <item index="1" class="java.lang.String" itemvalue="Go Application.Build 35.go and run" />
-        <item index="2" class="java.lang.String" itemvalue="Go Application.Build 34.go and run" />
-        <item index="3" class="java.lang.String" itemvalue="Go Application.Build 33.go and run" />
-        <item index="4" class="java.lang.String" itemvalue="Go Application.Build 31.go and run" />
+        <item index="0" class="java.lang.String" itemvalue="Go Application.Build 37.go and run" />
+        <item index="1" class="java.lang.String" itemvalue="Go Application.Build 36.go and run" />
+        <item index="2" class="java.lang.String" itemvalue="Go Application.Build 35.go and run" />
+        <item index="3" class="java.lang.String" itemvalue="Go Application.Build 34.go and run" />
+        <item index="4" class="java.lang.String" itemvalue="Go Application.Build 33.go and run" />
       </list>
     </recent_temporary>
   </component>
@@ -541,7 +543,7 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -708,9 +710,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/37.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="425">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="e#14#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
