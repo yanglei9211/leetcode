@@ -1,9 +1,10 @@
 package main
 
 import (
-	"strings"
 	"fmt"
+	"strings"
 )
+
 //Given a string s consists of upper/lower-case alphabets and empty space characters ' ',
 // return the length of last word in the string.
 //
@@ -20,8 +21,8 @@ func lengthOfLastWord(s string) int {
 	if len(s) == 0 {
 		return 0
 	}
-    ss :=  strings.Split(s, " ")
-	for i := len(ss)-1; i >=0; i-- {
+	ss := strings.Split(s, " ")
+	for i := len(ss) - 1; i >= 0; i-- {
 		if len(ss[i]) > 0 {
 			return len(ss[i])
 		}

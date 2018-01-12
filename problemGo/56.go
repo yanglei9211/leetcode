@@ -1,9 +1,10 @@
 package main
 
 import (
-	"sort"
 	"fmt"
+	"sort"
 )
+
 //Given a collection of intervals, merge all overlapping intervals.
 //
 //For example,
@@ -20,7 +21,7 @@ import (
 
 type Interval struct {
 	Start int
-	End int
+	End   int
 }
 
 type Intervals []Interval
@@ -47,8 +48,8 @@ func merge(intervals []Interval) []Interval {
 		return intervals
 	}
 
-    its := make(Intervals, 0, len(intervals))
-	for _, i := range(intervals) {
+	its := make(Intervals, 0, len(intervals))
+	for _, i := range intervals {
 		its = append(its, i)
 	}
 	sort.Sort(its)
@@ -72,6 +73,6 @@ func merge(intervals []Interval) []Interval {
 }
 
 func main() {
-	a := []Interval{Interval{1,3},Interval{2,6},Interval{8,10}, Interval{15,18}}
+	a := []Interval{Interval{1, 3}, Interval{2, 6}, Interval{8, 10}, Interval{15, 18}}
 	fmt.Println(merge(a))
 }

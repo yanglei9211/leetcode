@@ -15,14 +15,14 @@ func spiralOrder(matrix [][]int) []int {
 	}
 	m := len(matrix[0])
 	f = make([][]bool, n)
-	for i := 0; i < n; i ++ {
+	for i := 0; i < n; i++ {
 		f[i] = make([]bool, m)
 	}
 	res := make([]int, 0, n*m)
-	for cnt := 0; cnt < n*m; cnt ++ {
+	for cnt := 0; cnt < n*m; cnt++ {
 		res = append(res, matrix[cx][cy])
 		f[cx][cy] = true
-		if n > cx + fx[dir] && cx + fx[dir] >= 0 && m > cy + fy[dir] && cy + fy[dir] >= 0 && !f[cx+fx[dir]][cy+fy[dir]] {
+		if n > cx+fx[dir] && cx+fx[dir] >= 0 && m > cy+fy[dir] && cy+fy[dir] >= 0 && !f[cx+fx[dir]][cy+fy[dir]] {
 			cx += fx[dir]
 			cy += fy[dir]
 		} else {
@@ -37,9 +37,9 @@ func spiralOrder(matrix [][]int) []int {
 
 func main() {
 	a := [][]int{
-		{1,2,3},
-		{4,5,6},
-		{7,8,9},
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9},
 	}
 	fmt.Println(spiralOrder(a))
 }
