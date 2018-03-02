@@ -6,18 +6,16 @@ import (
 	"fmt"
 )
 
-//Given n non-negative integers representing the histogram's bar height where the width of each bar
-// is 1, find the area of largest rectangle in the histogram.
+//Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's
+// and return its area.
 //
+//For example, given the following matrix:
 //
-//Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
-//
-//
-//The largest rectangle is shown in the shaded area, which has area = 10 unit.
-//
-//For example,
-//Given heights = [2,1,5,6,2,3],
-//return 10.
+//1 0 1 0 0
+//1 0 1 1 1
+//1 1 1 1 1
+//1 0 0 1 0
+//Return 6.
 
 type pair struct {
 	v, idx int
@@ -115,11 +113,10 @@ func work(height []int, st, step int) []int {
 			ans[i] = ans[res.idx] + abs(i-res.idx)
 		}
 	}
-	fmt.Println(ans)
 	return ans
 }
 
-func largestRectangleArea(heights []int) int {
+func gt(heights []int) int {
 	left := work(heights, 0, 1)
 	right := work(heights, len(heights)-1, -1)
 	maxx := 0
@@ -132,18 +129,44 @@ func largestRectangleArea(heights []int) int {
 	return maxx
 }
 
-func main() {
-	a := []int{9, 1, 4, 5, 6, 5, 1, 4, 2}
-	res := largestRectangleArea(a)
-	fmt.Println(res)
-	//st := NewOrderStack()
-	//for idx, i := range(a) {
-	//	st.Push(pair{v:i, idx:idx})
-	//	fmt.Println(idx, i)
-	//}
-	//for !st.Empty() {
-	//	r, _ := st.Pop()
-	//	fmt.Println(r.(pair))
-	//}
+func maximalRectangle(matrix [][]byte) int {
+	n := len(matrix)
+	if n == 0 {
+		return 0
+	}
+	m := len(matrix[0])
+	down := make([][]int, n)
+	for i := 0; i < n; i++ {
+		down[i] = make([]int, m)
+	}
+	for i := n - 1; i >= 0; i-- {
+		for j := m - 1; j >= 0; j-- {
+			if matrix[i][j] == '0' {
+				down[i][j] = 0
+			} else {
+				if i+1 < n {
+					down[i][j] = down[i+1][j] + 1
+				} else {
+					down[i][j] = 1
+				}
+			}
+		}
+	}
+	ans := 0
+	for _, x := range down {
+		res := gt(x)
+		if res > ans {
+			ans = res
+		}
+	}
+	return ans
+}
 
+func main() {
+	//[["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
+	a := [][]byte{{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'},
+		{'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}}
+
+	res := maximalRectangle(a)
+	fmt.Println(res)
 }
