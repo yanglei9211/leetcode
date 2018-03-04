@@ -1,36 +1,51 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    //"hash/fnv"
+    "crypto/md5"
+)
 
-func main() {
-    x := 34.00515
-    y := -3
-    fmt.Println(myPow(x,y))
+func a(x string) []byte{
+    /*
+    h := fnv.New64()
+    h.Reset()
+    h.Write([]byte(x))
+    r := h.Sum64()
+    */
+    h := md5.New()
+    h.Write([]byte(x))
+    r := h.Sum(nil)
+    fmt.Println(r)
+    fmt.Printf("%x\n", r)
+    return r
 }
 
-func myPow(x float64, n int) float64 {
-    var flag bool
-    if n == 0 {
-        return 1
-    } else if n < 0 {
-        flag = true
-        n = -n
-    } else {
-        flag = false
-    }
 
-    t := 1.0
-    rx := x
-    for n > 0 {
-        if (n&1)>0 {
-            t = t * rx
-        }
-        rx = rx * rx
-        n >>= 1
-    }
-    if flag {
-        return 1.0 / t
+func main(){
+    s := "aabb"
+    a(s)
+    mk := fmt.Sprintf()
+    //var res = a(s)
+    //fmt.Println(res)
+
+    /*
+    n := 0
+    defer func(){
+        n++;
+        fmt.Printf("fi %d\n", n)
+    }()
+    fmt.Printf("main %d\n", n)
+    */
+    //test := "he1h3eh1he"
+    /*
+    reg, err := regexp.Compile(`\d+`)
+    if err != nil{
+        fmt.Println("aaaa")
     } else {
-        return t
+        fmt.Printf("%s,%v\n", reg.Find([]byte("1233213123")), err)
     }
+    */
+// "Hello",
 }
+
