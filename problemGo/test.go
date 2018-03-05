@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	x := 34.00515
 	y := -3
