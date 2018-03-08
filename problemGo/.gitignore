@@ -2,3 +2,4 @@
 *.pycoj
 .idea/
 .idea/*
+.DS_Store
